@@ -1,0 +1,42 @@
+{
+	"users_manager": [
+		{
+			"id": 1,
+			"firstName": "Ronald",
+			"lastName": "Pinto",
+			"username": "admin",
+			"password": "asdfasdf",			
+			"email": "ronald.pinto.d@gmail.com"			
+		},
+		{
+			"id": 2,
+			"firstName": "Diego",
+			"lastName": "Avila",
+			"username": "diego",
+			"password": "asdf",			
+			"email": "diegoa@gmail.com"			
+        }		
+	],
+	"users": [
+		{
+			"id": 1,
+			"firstName": "Luis",
+			"lastName": "Aviles",
+			"street": "Av. Santa Cruz",
+			"city": "Cochabamba",
+			"gender": "male",
+			"email": "luis@mail.com",
+			"pictureURL": "https://homepage.com/image.jpg"
+		},
+		{
+			"id": 2,
+			"firstName": "Diego",
+			"lastName": "Avila",
+			"street": "Av. Santa Cruz",
+			"city": "Cochabamba",
+			"gender": "male",
+			"email": "diego@mail.com",
+			"pictureURL": "https://homepage.com/image.jpg"
+        }		
+	]
+}
