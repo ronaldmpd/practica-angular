@@ -2,21 +2,18 @@
 	"users_manager": [
 		{
 			"id": 1,
-			"firstName": "Ronald",
-			"lastName": "Pinto",
+			"fullName": "Ronald Pinto",			
 			"username": "admin",
-			"password": "asdfasdf",			
-			"email": "ronald.pinto.d@gmail.com"			
+			"password": "asdf"				
 		},
 		{
 			"id": 2,
-			"firstName": "Diego",
-			"lastName": "Avila",
+			"fullName": "Diego Avila",			
 			"username": "diego",
-			"password": "asdf",			
-			"email": "diegoa@gmail.com"			
+			"password": "asdf"						
         }		
 	],
+
 	"users": [
 		{
 			"id": 1,
