@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit() {
+    this.userManager = { id:0, username:'', password:'', fullName:''};    
   }
 
   onLogin(userManager: UserManager){
