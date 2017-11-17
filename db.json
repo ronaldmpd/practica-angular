@@ -23,7 +23,7 @@
 			"city": "Cochabamba",
 			"gender": "male",
 			"email": "luis@mail.com",
-			"pictureURL": "https://homepage.com/image.jpg"
+			"pictureURL": "https://www.tm-town.com/assets/default_male300x300-aae6ae0235b6cd78cee8df7ae19f6085.png"
 		},
 		{
 			"id": 2,
@@ -33,7 +33,27 @@
 			"city": "Cochabamba",
 			"gender": "male",
 			"email": "diego@mail.com",
-			"pictureURL": "https://homepage.com/image.jpg"
-        }		
+			"pictureURL": "https://img00.deviantart.net/cc6b/i/2013/319/5/b/male_cartoon_avatar_by_ahninniah-d6ib8p2.png"
+		},
+		{
+			"id": 3,
+			"firstName": "Wilberth",
+			"lastName": "Garcia",
+			"street": "Av. Libertador",
+			"city": "Tarija",
+			"gender": "male",
+			"email": "wilberth@mail.com",
+			"pictureURL": "https://img00.deviantart.net/cc6b/i/2013/319/5/b/male_cartoon_avatar_by_ahninniah-d6ib8p2.png"
+		},
+		{
+			"id": 4,
+			"firstName": "Maria",
+			"lastName": "Garcia",
+			"street": "Av. Aniceto Arce",
+			"city": "Tarija",
+			"gender": "female",
+			"email": "maria@mail.com",
+			"pictureURL": "https://www.tm-town.com/assets/default_female600x600-3702af30bd630e7b0fa62af75cd2e67c.png"
+        }			
 	]
 }

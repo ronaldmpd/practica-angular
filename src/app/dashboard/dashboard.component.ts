@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../shared/model/user';
+import { Router } from '@angular/router';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'pa-dashboard',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  users: User[];
+
+  constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
+    this.userService.getUsers().subscribe((result) => {      
+      this.users = result;
+      console.log("users result:" + JSON.stringify(result));
+    })
   }
 
 }
