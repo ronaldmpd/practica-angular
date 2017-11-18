@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserService } from './shared/services/user.service';
 import { MatListModule } from '@angular/material';
+import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list-item.component';
 
 
 
@@ -19,7 +20,8 @@ import { MatListModule } from '@angular/material';
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardListItemComponent
   ],
   imports: [
     BrowserModule,

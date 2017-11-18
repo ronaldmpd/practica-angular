@@ -21,4 +21,9 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  onSelectUser(user: User):void {
+    console.log('user selected', user);
+    //this.router.navigate(['user', user.id,'edit']);
+  }
+
 }

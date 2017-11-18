@@ -1,14 +1,11 @@
-<p>
-  dashboard works!
-</p>
+<h1>
+  Dashboard 
+</h1>
 
 <mat-list>  
-   <mat-list-item *ngFor="let user of users" >
-    <img *ngIf="user.pictureURL" mat-list-avatar 
-          [src]="user.pictureURL">
-    <img *ngIf="!user.pictureURL" mat-list-avatar 
-          [src]="defaultPictureURL">
-    <h4 mat-line>{{user.firstName}}</h4>
-    <p mat-line>{{user.lastName}}</p>
-  </mat-list-item>  
+   <pa-dashboard-list-item *ngFor="let user of users"
+    [userParam]="user"
+    [defaultPictureURL]="'http://findicons.com/files/icons/1072/face_avatars/300/a02.png'"    
+    (onSelect)="onSelectUser($event)">    
+  </pa-dashboard-list-item>  
 </mat-list> 

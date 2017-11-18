@@ -1,0 +1,9 @@
+  <mat-list-item (click)="onClick(userParam)" >
+   <img *ngIf="userParam.pictureURL" mat-list-avatar 
+         [src]="userParam.pictureURL">
+   <img *ngIf="!userParam.pictureURL" mat-list-avatar 
+         [src]="defaultPictureURL">
+   <h4 mat-line>{{userParam.firstName}} {{userParam.lastName}}</h4>
+   <p mat-line>{{userParam.gender}}</p>
+   <p mat-line>{{userParam.street}}</p>
+ </mat-list-item>  
