@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserService } from './shared/services/user.service';
-import { MatListModule } from '@angular/material';
+import { MatListModule, MatCardModule } from '@angular/material';
 import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list-item.component';
 
 
@@ -27,6 +27,7 @@ import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list
     BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
+    MatCardModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule
