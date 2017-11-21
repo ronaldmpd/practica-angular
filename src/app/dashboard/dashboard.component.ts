@@ -17,13 +17,13 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.userService.getUsers().subscribe((result) => {      
       this.users = result;
-      console.log("users result:" + JSON.stringify(result));
+      //console.log("users result:" + JSON.stringify(result));
     })
   }
 
   onSelectUser(user: User):void {
     console.log('user selected', user);
-    //this.router.navigate(['user', user.id,'edit']);
+    this.router.navigate(['user', user.id,'edit']);
   }
 
 }

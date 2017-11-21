@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserService } from './shared/services/user.service';
 import { MatListModule } from '@angular/material';
 import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list-item.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 
 
 
@@ -21,7 +22,8 @@ import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    DashboardListItemComponent
+    DashboardListItemComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,

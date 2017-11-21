@@ -1,0 +1,129 @@
+<h1>
+  User
+</h1>
+
+<div class="container" *ngIf="user">  
+  <form (ngSubmit)="onSave(user)" 
+        #userForm="ngForm">
+    
+      <div class="form-group" 
+          [ngClass]="{'has-error': firtsName.invalid && firtsName.dirty}">
+      <label for="firtsName" class="control-label">
+        Firts Name
+      </label>
+      <input type="text" class="form-control" 
+             name="firtsName" 
+             [(ngModel)]="user.firstName"
+             #firtsName="ngModel" 
+             required>
+         <div *ngIf="firtsName.invalid && firtsName.dirty">
+          First Name is required
+        </div>
+    </div>
+    
+    <div class="form-group" [ngClass]="{'has-error': lastName.invalid && lastName.dirty}">
+      <label for="lastName" class="control-label">
+        Last Name
+      </label>
+      <input type="text" class="form-control" 
+             name="lastName" 
+             [(ngModel)]="user.lastName"
+             #lastName="ngModel"
+             required>
+      <div *ngIf="lastName.invalid && lastName.dirty"
+            class="text-danger">
+            Last Name is required
+      </div>
+    </div>
+    
+    <div class="form-group" [ngClass]="{'has-error': street.invalid && street.dirty}">
+      <label for="street" class="control-label">
+         Street
+      </label>
+      <input type="text" class="form-control" 
+             name="street" 
+             [(ngModel)]="user.street"
+             #street="ngModel" 
+             required>
+      <div *ngIf="street.invalid && street.dirty"
+            class="text-danger">
+            Street is required
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': city.invalid && city.dirty}">
+      <label for="city" class="control-label">
+         Cityt
+      </label>
+      <input type="text" class="form-control" 
+             name="city" 
+             [(ngModel)]="user.city"
+             #city="ngModel" 
+             required>
+      <div *ngIf="city.invalid && city.dirty"
+            class="text-danger">
+            City is required
+      </div>
+    </div>
+
+    <div class="form-group" >
+      <label for="gender" class="control-label">
+         Gender
+      </label>
+      <div class="form-group">
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" value="male" ng-model="user.gender">
+                Male
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="gender" value="female" ng-model="user.gender">
+                Female
+            </label>
+        </div>
+    </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': email.invalid && email.dirty}">
+      <label for="city" class="control-label">
+        Email
+      </label>
+      <input type="text" class="form-control" 
+             name="email" 
+             [(ngModel)]="user.email"
+             #email="ngModel" 
+             required>
+      <div *ngIf="email.invalid && email.dirty"
+            class="text-danger">
+            Email is required
+      </div>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': pictureURL.invalid && pictureURL.dirty}">
+      <label for="pictureURL" class="control-label">
+        Email
+      </label>
+      <input type="text" class="form-control" 
+             name="pictureURL" 
+             [(ngModel)]="user.pictureURL"
+             #pictureURL="ngModel" 
+             required>
+      <div *ngIf="pictureURL.invalid && pictureURL.dirty"
+            class="text-danger">
+            PictureURL is required
+      </div>
+    </div>
+    
+    <button class="btn btn-success" 
+            type="submit"
+            [disabled]="userForm.form.invalid">
+        Save
+    </button>       
+  </form>
+  <button class="btn" (click)="onCancel()" >
+    Cancel
+  </button>    
+</div>
+
