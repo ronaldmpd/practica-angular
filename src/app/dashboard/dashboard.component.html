@@ -1,6 +1,9 @@
 <h1>
   Dashboard 
 </h1>
+<button class="btn btn-primary pull-right" [routerLink]="['/user', 'new']">
+Add New
+</button>
 
 <mat-list>  
    <pa-dashboard-list-item *ngFor="let user of users"
