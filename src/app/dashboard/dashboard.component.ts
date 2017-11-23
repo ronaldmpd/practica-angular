@@ -32,6 +32,9 @@ export class DashboardComponent implements OnInit {
 
   onDeleteUser(user: User){
     console.log('onDeleteUser - dashboadr');
+    var result = confirm("Are you sure you want to delete user: " + user.firstName + ' '+user.lastName + "'?");
+    if (!result)
+        return;
     this.userService.deleteUser(user.id).subscribe((result) => {
         console.log('Delete user done',user);        
         this.loadUsers();
