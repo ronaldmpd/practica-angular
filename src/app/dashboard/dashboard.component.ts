@@ -15,15 +15,27 @@ export class DashboardComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) { }
 
   ngOnInit() {
+    this.loadUsers();
+  }
+
+  loadUsers():void{
     this.userService.getUsers().subscribe((result) => {      
       this.users = result;
       //console.log("users result:" + JSON.stringify(result));
     })
   }
 
-  onSelectUser(user: User):void {
+  onEditUser(user: User):void {
     console.log('user selected', user);
     this.router.navigate(['user', user.id,'edit']);
+  }
+
+  onDeleteUser(user: User){
+    console.log('onDeleteUser - dashboadr');
+    this.userService.deleteUser(user.id).subscribe((result) => {
+        console.log('Delete user done',user);        
+        this.loadUsers();
+    })
   }
 
 }

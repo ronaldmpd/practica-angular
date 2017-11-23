@@ -15,16 +15,22 @@ export class DashboardListItemComponent implements OnInit {
   defaultPictureURL: string;
 
   @Output()
-  onSelect: EventEmitter<User> = new EventEmitter<User>();
+  onEditUserOutput: EventEmitter<User> = new EventEmitter<User>();
 
+  @Output()
+  onDeleteUserOutput: EventEmitter<User> = new EventEmitter<User>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick(user: User){
-    this.onSelect.emit(user);
+  onClickEdit(user: User){
+    this.onEditUserOutput.emit(user);
   }
 
+  onClickDelete(user: User){
+    console.log('onClickDelete user: ', user);
+    this.onDeleteUserOutput.emit(user);
+  }
 }
