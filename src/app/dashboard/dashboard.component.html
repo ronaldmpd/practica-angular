@@ -1,4 +1,4 @@
-<h1>
+<h1 style="color: dimgrey;">
   Dashboard 
 </h1>
 <button class="btn btn-primary pull-right" [routerLink]="['/user', 'new']">
@@ -8,13 +8,13 @@ Add New
 <mat-list>  
    <pa-dashboard-list-item *ngFor="let user of users"
     [userParam]="user"
-    [defaultPictureURL]="'http://findicons.com/files/icons/1072/face_avatars/300/a02.png'"    
+    [defaultPictureURL]="'https://www.juptr.io/images/default-user.png'"    
     (onEditUserOutput)="onEditUser($event)"    
     (onDeleteUserOutput)="onDeleteUser($event)">    
   </pa-dashboard-list-item>  
 </mat-list> 
 
-<!-- <mat-grid-list cols="2" rowHeight="2:1">
+<!-- <mat-grid-list cols="2">
     <pa-dashboard-list-item *ngFor="let user of users"
     [userParam]="user"
     [defaultPictureURL]="'http://findicons.com/files/icons/1072/face_avatars/300/a02.png'"    
@@ -23,8 +23,8 @@ Add New
 
 </mat-grid-list> -->
 
-<!-- 
-<mat-grid-list cols="2">
+
+<!-- <mat-grid-list cols="2">
     <mat-grid-tile>
         <mat-card class="example-card">
             <mat-card-header>

@@ -6,5 +6,5 @@ export interface User {
     city: string,
     gender: string,
     email: string,
-    pictureURL: string,
+    pictureURL: string
 }
