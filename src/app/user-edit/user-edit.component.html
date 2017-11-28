@@ -63,12 +63,12 @@
             <div class="form-group">
               <div class="radio">
                 <label>
-                  <input type="radio" name="gender" value="male" ng-model="user.gender"> Male
+                  <input type="radio" name="gender" value="male" [(ngModel)]="user.gender"> Male
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="gender" value="female" ng-model="user.gender"> Female
+                  <input type="radio" name="gender" value="female" [(ngModel)]="user.gender"> Female
                 </label>
               </div>
             </div>
@@ -81,7 +81,7 @@
             <input type="text" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel" pattern="^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
               title="Email is invalid" required>
             <div *ngIf="email.invalid && email.dirty" class="text-danger">
-              Email is required.
+              Email is required, Or Email invalid.
             </div>
           </div>
       
