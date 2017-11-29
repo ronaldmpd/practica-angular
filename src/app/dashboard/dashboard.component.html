@@ -4,7 +4,7 @@
 <button class="btn btn-primary pull-right" [routerLink]="['/user', 'new']">
 Add New
 </button>
-
+<!-- list start ok -->
 <mat-list>  
    <pa-dashboard-list-item *ngFor="let user of users"
     [userParam]="user"
@@ -13,6 +13,7 @@ Add New
     (onDeleteUserOutput)="onDeleteUser($event)">    
   </pa-dashboard-list-item>  
 </mat-list> 
+<!-- list end ok -->
 
 <!-- <mat-grid-list cols="2">
     <pa-dashboard-list-item *ngFor="let user of users"
