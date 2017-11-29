@@ -15,94 +15,37 @@ Add New
 </mat-list> 
 <!-- list end ok -->
 
-<!-- <mat-grid-list cols="2">
-    <pa-dashboard-list-item *ngFor="let user of users"
+<!-- <mat-grid-list cols="2" rowHeight="200px">  
+   <pa-dashboard-list-item *ngFor="let user of users"
     [userParam]="user"
-    [defaultPictureURL]="'http://findicons.com/files/icons/1072/face_avatars/300/a02.png'"    
-    (onSelect)="onSelectUser($event)">    
+    [defaultPictureURL]="'https://www.juptr.io/images/default-user.png'"    
+    (onEditUserOutput)="onEditUser($event)"    
+    (onDeleteUserOutput)="onDeleteUser($event)">    
   </pa-dashboard-list-item>  
+</mat-grid-list>  -->
 
+
+<!-- <mat-grid-list cols="2" rowHeight="300px">
+  <mat-grid-tile
+  *ngFor="let user of users">
+    <mat-card >
+      <mat-card-header>
+            <img *ngIf="user.pictureURL" mat-card-avatar [src]="user.pictureURL">
+            <img *ngIf="!user.pictureURL" mat-card-avatar [src]="defaultPictureURL">
+        <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+        <mat-card-subtitle>{{user.gender}}</mat-card-subtitle>
+      </mat-card-header>      
+      <mat-card-content>
+        <p>
+            {{user.street}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button type="button" class="btn btn-success btn-sm" (click)="onClickEdit(user)" >Edit</button>
+        <button type="button" class="btn btn-danger btn-sm" (click)="onClickDelete(user)">Delete</button>                
+      </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
 </mat-grid-list> -->
 
 
-<!-- <mat-grid-list cols="2">
-    <mat-grid-tile>
-        <mat-card class="example-card">
-            <mat-card-header>
-              <img mat-card-avatar src="assets/images/ronaldPerfil.png" alt="Photo of a Ronald">
-              <mat-card-title>Ronald Pinto</mat-card-title>
-              <mat-card-subtitle>Developer</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/images/mtb.jpg" alt="MTB">
-            <mat-card-content>
-              <p>
-                  I like mountain bike, MTB.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-          </mat-grid-tile>
-          <mat-grid-tile>
-        <mat-card class="example-card">
-            <mat-card-header>
-              <img mat-card-avatar src="assets/images/ronaldPerfil.png" alt="Photo of a Ronald">
-              <mat-card-title>Ronald Pinto</mat-card-title>
-              <mat-card-subtitle>Developer</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="assets/images/mtb.jpg" alt="MTB">
-            <mat-card-content>
-              <p>
-                I like mountain bike, MTB.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-          </mat-grid-tile>
-          <mat-grid-tile>
-              <mat-card class="example-card">
-                  <mat-card-header>
-                    <img mat-card-avatar src="assets/images/ronaldPerfil.png" alt="Photo of a Ronald">
-                    <mat-card-title>Ronald Pinto</mat-card-title>
-                    <mat-card-subtitle>Developer</mat-card-subtitle>
-                  </mat-card-header>
-                  <img mat-card-image src="assets/images/mtb.jpg" alt="MTB">
-                  <mat-card-content>
-                    <p>
-                      I like mountain bike, MTB.
-                    </p>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
-                  </mat-card-actions>
-                </mat-card>
-                </mat-grid-tile>
-                <mat-grid-tile>
-                    <mat-card class="example-card">
-                        <mat-card-header>
-                          <img mat-card-avatar src="assets/images/ronaldPerfil.png" alt="Photo of a Ronald">
-                          <mat-card-title>Ronald Pinto</mat-card-title>
-                          <mat-card-subtitle>Developer</mat-card-subtitle>
-                        </mat-card-header>
-                        <img mat-card-image src="assets/images/mtb.jpg" alt="MTB">
-                        <mat-card-content>
-                          <p>
-                            I like mountain bike, MTB.
-                          </p>
-                        </mat-card-content>
-                        <mat-card-actions>
-                          <button mat-button>LIKE</button>
-                          <button mat-button>SHARE</button>
-                        </mat-card-actions>
-                      </mat-card>
-                      </mat-grid-tile>
-
-
-        </mat-grid-list> -->
-    
