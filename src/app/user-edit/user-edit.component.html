@@ -1,3 +1,4 @@
+<pa-navbar></pa-navbar>
 <div class="container-fluid">  
   <div class="row">    
       <div *ngIf="!isNewUser"  class="col-sm-6">
@@ -63,12 +64,12 @@
             <div class="form-group">
               <div class="radio">
                 <label>
-                  <input type="radio" name="gender" value="male" [(ngModel)]="user.gender"> Male
+                  <input type="radio" name="gender" value="Male" [(ngModel)]="user.gender"> Male
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="gender" value="female" [(ngModel)]="user.gender"> Female
+                  <input type="radio" name="gender" value="Female" [(ngModel)]="user.gender"> Female
                 </label>
               </div>
             </div>

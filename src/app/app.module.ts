@@ -14,6 +14,7 @@ import { UserService } from './shared/services/user.service';
 import { MatListModule, MatCardModule, MatGridListModule } from '@angular/material';
 import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list-item.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -23,7 +24,8 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     LoginComponent,
     DashboardComponent,
     DashboardListItemComponent,
-    UserEditComponent
+    UserEditComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
