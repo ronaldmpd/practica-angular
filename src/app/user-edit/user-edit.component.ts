@@ -12,6 +12,7 @@ export class UserEditComponent implements OnInit {
 
   user: User;
   isNewUser = false;
+  isDataLoading: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute, private userService: UserService, private router: Router) { }
 
@@ -42,15 +43,18 @@ export class UserEditComponent implements OnInit {
   }
 
   onSave(user: User) {
+    this.isDataLoading = true;
     if (this.isNewUser) {
       this.userService.createUser(user).subscribe(result => {
         console.log('Create Done', result);
+        this.isDataLoading = false;
         this.router.navigate(['dashboard']);
       });
     }
     else {
       this.userService.updateUser(user).subscribe(result => {
         console.log('Update Done', result);
+        this.isDataLoading = false;
         this.router.navigate(['dashboard']);
       });
     }
