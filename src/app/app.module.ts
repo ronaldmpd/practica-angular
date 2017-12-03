@@ -15,6 +15,8 @@ import { MatListModule, MatCardModule, MatGridListModule } from '@angular/materi
 import { DashboardListItemComponent } from './dashboard-list-item/dashboard-list-item.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NotFount404Component } from './not-fount-404/not-fount-404.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
@@ -25,7 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     DashboardComponent,
     DashboardListItemComponent,
     UserEditComponent,
-    NavbarComponent
+    NavbarComponent,
+    NotFount404Component,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

@@ -31,10 +31,21 @@ export class LoginComponent implements OnInit {
         {
           if(result.length == 1){
             console.log("Login OK user: " + JSON.stringify(result[0]));
+            localStorage.setItem('isLogin', '1');
+            localStorage.setItem('userManager', JSON.stringify(result));
             this.router.navigate(['/dashboard']);
           }
         }
     })
   }
+
+  _keyPressAlphanumeric(event: any) {
+    const pattern = /[a-zA-Z0-9\s]+/;
+    let inputChar = String.fromCharCode(event.charCode);
+    if (!pattern.test(inputChar)) {
+      // invalid character, prevent input
+      event.preventDefault();
+    }
+}
 
 }
